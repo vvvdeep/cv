@@ -1,0 +1,35 @@
+{
+  "name": "pdf-cv-builder",
+  "version": "1.0.0",
+  "description": "Fill in your details and download a beautifully generated pdf version of your CV.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvvdeep/cv.git"
+  },
+  "keywords": [
+    "CV",
+    "Free-CV",
+    "pdf",
+    "generate",
+    "online",
+    "free",
+    "cv",
+    "generate"
+  ],
+  "author": "https://github.com/vvvdeep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vvvdeep/cv/issues"
+  },
+  "homepage": "https://github.com/vvvdeep/cv#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "phantomjs-prebuilt": "^2.1.14",
+    "pug": "^2.0.0-rc.2"
+  }
+}

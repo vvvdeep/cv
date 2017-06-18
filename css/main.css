@@ -1,0 +1,223 @@
+/* To remove print header and footer */
+@page { size: auto;  margin: 0mm; }
+
+@media print {
+  body {
+    margin-top: 20mm;
+  }
+  #profExpSections .section:nth-child(3) {
+    page-break-after: always;
+  }
+  #profExpSections .section:nth-child(4) {
+    margin-top: 20px;
+  }
+}
+
+@font-face {
+    font-family: 'myFont';
+    src: url('./fonts/Nunito_Sans/NunitoSans-regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'myFontBold';
+    src: url('./fonts/Nunito_Sans/NunitoSans-Bold.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+html, body {
+  font-family: 'myFont', sans-serif;
+  margin: 0 3%;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: myFontBold;
+  font-size: 13px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+}
+
+.intro {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid;
+}
+
+.contact {
+  margin-bottom: 5px;
+}
+
+.name {
+  color: #000080;
+  font-family: 'myFontBold', sans-serif;
+  font-size: 24px;
+}
+
+.header {
+  color: #000080;
+  font-family: 'myFontBold', sans-serif;
+  font-size: 16px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section .header {
+  margin-bottom: 8px;
+}
+
+.qualification-block {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 8px;
+}
+
+.year {
+  margin-right: 30px;
+}
+
+.tech-row {
+  display: -webkit-flex;
+  display: flex;
+  line-height: 26px;
+}
+
+.tech-column {
+  width: calc(100% - 210px);
+}
+
+.tech-column.heading {
+  font-family: 'myFontBold', sans-serif;
+  width: 210px;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.row:first-child .column {
+  border-top: 1px solid;
+}
+
+.row.heading {
+  color: #000080;
+  font-family: 'myFontBold', sans-serif;
+  font-size: 18px;
+}
+
+.column {
+  width: 22%;
+  border: 1px solid;
+  border-left: 0 none;
+  border-top: 0 none;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.column:first-child + .column {
+  width: 46%;
+}
+
+.column:first-child {
+  width: 10%;
+  border-left: 1px solid;
+  text-align: center;
+}
+
+.relex-section {
+  padding-left: 30px;
+}
+
+.relex-table {
+  font-family: 'myFontBold', sans-serif;
+  margin-bottom: 15px;
+}
+
+.relex-table .column:first-child {
+  width: 30%;
+  text-align: left;
+}
+
+.relex-table .column, .relex-table .column:first-child + .column {
+  width: 70%;
+}
+
+.relex-block {
+  margin-bottom: 15px;
+}
+
+.relex-head {
+  color: #000080;
+  font-family: 'myFontBold', sans-serif;
+  font-size: 18px;
+}
+
+.relex-desc ul {
+  list-style-type: circle;
+}
+
+.person-row {
+  display: -webkit-flex;
+  display: flex;
+  line-height: 24px;
+}
+
+.person-column:first-child {
+  width: 210px;
+}
+
+
+
+.comp-name {
+  font-family: 'myFontBold', sans-serif;
+  font-size: 15px;
+  color: #000080;
+}
+
+.job-details {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.details-block {
+  padding-left: 30px;
+}
+
+.sub-header {
+  font-family: 'myFontBold', sans-serif;
+}
+
+.responsibilities, .technology, .projects {
+  margin-bottom: 5px;
+}
+
+.sub-content {
+  padding-left: 22px;
+}
+
+.projects .sub-content {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-name {
+  width: 50%;
+  display: inline-block;
+}

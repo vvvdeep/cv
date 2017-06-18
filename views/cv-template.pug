@@ -1,0 +1,92 @@
+doctype html
+html(lang="en")
+  head
+    title= CV
+    link(rel='stylesheet', href='css/main.css')
+    - var cvData = {data}
+  body
+    #main
+      .intro
+        .name #{cvData.data.name}
+        .contact
+          span.contact-block
+            a(href='mailto:'+cvData.data.email) #{cvData.data.email}
+          span  | 
+          span.contact-block
+            a(href='tel:'+cvData.data.mobile) #{cvData.data.mobile}
+          span  | 
+          span.contact-block
+            a(href=cvData.data.linkedin, target='_blank') #{cvData.data.linkedin}
+      .section #{cvData.data.goal}
+      #profExpSections
+        each company in cvData.data.companies
+          .section
+            .company
+              .comp-name #{company.company}
+              .job-details
+                .title #{company.role}
+                .duration #{company.duration}
+              .details-block
+                .responsibilities
+                  .sub-header Responsibilities:
+                  ul
+                    each responsibility in company.responsibilities
+                      li #{responsibility}
+                .technology
+                  .sub-header Technologies:
+                  .sub-content #{company.technology}
+                .projects
+                  .sub-header Key Projects:
+                  .sub-content
+                    each project in company.projects
+                      span.project-name - #{project}
+      .section
+        .header Technical Proficiency
+        .tech-table
+          .tech-row
+            .tech-column.heading Technologies
+            .tech-column #{cvData.data.techs}
+          .tech-row
+            .tech-column.heading Frameworks & Libraries
+            .tech-column #{cvData.data.frameworks}
+          .tech-row
+            .tech-column.heading Misc Technologies/Tools
+            .tech-column #{cvData.data.misc}
+          .tech-row
+            .tech-column.heading IDE
+            .tech-column #{cvData.data.ide}
+          .tech-row
+            .tech-column.heading Operating Systems
+            .tech-column #{cvData.data.os}
+      .section
+        .header Qualifications
+        each item in cvData.data.qualifications
+          .qualification-block
+              .year #{item.year}
+              div
+                div #{item.degree}
+                div #{item.uni}
+      .section
+        .header Personal Details
+        .person-table
+          .person-row
+            .person-column DOB
+            .person-column #{cvData.data.dob}
+          .person-row
+            .person-column Marital Status
+            .person-column #{cvData.data.maritalStatus}
+          .person-row
+            .person-column Nationality
+            .person-column #{cvData.data.nationality}
+          .person-row
+            .person-column Passport No.
+            .person-column #{cvData.data.passport}
+          .person-row
+            .person-column Current Employer
+            .person-column #{cvData.data.currentEmployer}
+          .person-row
+            .person-column Current Designation
+            .person-column #{cvData.data.currentProfile}
+          .person-row
+            .person-column Languages
+            .person-column #{cvData.data.languages}

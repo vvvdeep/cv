@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('./fonts/Nunito_Sans/NunitoSans-regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'myFontBold';
+    src: url('./fonts/Nunito_Sans/NunitoSans-Bold.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+html, body {
+  font-family: 'myFont', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+body {
+  padding: 0 10%;
+  background: #f2f7fb;
+}
+
+ul {
+  margin: 0;
+}
+
+.company-section, .qualification-section {
+  border-top: 10px solid #ece6e6;
+}
+
+.company-section:first-of-type, .qualification-section:first-of-type {
+  border-top: 0 none;
+}
+
+.field-wrap {
+  padding: 5px;
+  border-bottom: 1px solid #ece6e6;
+  display: flex;
+}
+
+.field-wrap:first-of-type {
+  border-top: 1px solid #ece6e6;
+}
+
+.label {
+  width: 200px;
+  display: inline-block;
+  border-right: 1px solid #ece6e6;
+  margin-right: 15px;
+}
+
+.field-wrap input, .field-wrap textarea {
+  width: 250px;
+  resize: horizontal;
+}
+
+.multi-input input {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.add-more {
+  padding: 0px 10px;
+  border: 1px solid #008000;
+  display: inline-block;
+  border-radius: 8px;
+  margin-top: 5px;
+  color: #008000;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.add-more:hover {
+  background: #008000;
+  color: #fff;
+}
+
+.button-wrapper {
+  margin: 30px 0;
+}
+
+.button {
+  padding: 8px;
+  border: 1px solid #94d2ea;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: rgba(0, 140, 243, 0.5);
+  color: #fff;
+}
